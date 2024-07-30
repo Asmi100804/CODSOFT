@@ -1,0 +1,261 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    color: white;
+    background-color: black;
+}
+
+.name{
+    font-family: "Bungee Shade";
+    font-size: 250%;
+    color: #FFC400ff;
+}
+.navigation{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #FFC400ff;
+    font-size: 18px;
+}
+nav ul li a:hover{
+    background-color: #FFC400ff;
+    color: black;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+#introimg{
+    height: 65vh;
+    width: 700px;
+    float: right;
+}
+.introtext{
+    padding: 140px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #FFC400ff;
+}
+.introtext h1{
+    font-size: 60px;
+}
+.introtext h2{
+    font-size: 30px;
+}
+.introtext h1 span{
+    color: white;
+}
+
+#about{
+    margin: 0px 140px;
+    padding: 50px 0px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-left{
+    flex-basis: 35%; 
+}
+.about-left img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-right{
+    flex-basis: 60%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #CCE0FFff;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links:hover{
+    background-color: #CCE0FFff;
+    color: black;
+    padding: 3px;
+    border-radius: 5px;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0px;
+    font-size: 18px;
+}
+.tab-contents ul li span{
+    color: #CCE0FFff;
+    font-size: 16px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+#projects{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0px 140px;
+    padding: 30px 0px;
+}
+.project-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.project-list div{
+    background-color:#CCE0FFff;
+    color: black;
+    padding: 40px;
+    font-size: 13px;
+    font-size: 300;
+    border-radius: 12px;
+    transition: transform 0.5s;
+}
+.project-list div h2{
+    font-size: 30px;
+    font-weight: bolder;
+    margin-bottom: 15px;
+}
+.project-list div:hover{
+    background-color: #6BD5E5ff;
+    transform: translateY(-10px) translateX(5px);
+}
+
+#contact{
+    margin: 0px 140px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin: 15px 0px;
+}
+.contact-left p a{
+    text-decoration: none;
+    color: white;
+}
+.btn{
+    display: inline-block;
+    color: white;
+    background-color: #6BD5E5ff;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 10px;
+    margin: 20px 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    background-color: rgb(87, 86, 86);
+    padding: 15px;
+    margin: 15px 0px;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+footer{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 740px){
+      
+    #introimg{
+        width: 50vw;
+        object-fit: contain;
+        float: right;
+    }
+    .introtext h2{
+        font-size: 22px;
+    }
+    .introtext h1{
+        font-size: 28px;
+    }
+    
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+        color: #FFC400ff;
+    }
+    nav ul{
+        background-color: rgb(255, 255, 255);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding: 50px;
+        z-index: 2;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+        color: white;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .title{
+        font-size: 35px;
+    }
+    .about-left, .about-right{
+        flex-basis: 100%;
+    }
+
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+
+}
+
+
+
+
+
+

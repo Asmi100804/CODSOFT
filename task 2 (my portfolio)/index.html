@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/e2796c3cab.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="navigation" id="home">
+        <nav>
+            <span class="name">ASMI</span>
+            <ul id="sidemenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skill1">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+    <div class="intro">
+        <img src="images/bg.webp" alt="img" id="introimg">
+        <div class="introtext">
+            <h2>Hi There,</h2>
+            <h1>I'm <span>Asmi Atreja</span></h1>
+            <h2>And I'm a Frontend Developer</h2>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-left">
+                    <img src="images/myself.jfif" alt="">
+                </div>
+                <div class="about-right">
+                    <h1 class="title">About Me</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius iure laborum iste eveniet asperiores placeat nemo necessitatibus, debitis libero, quisquam porro eligendi molestias! Sapiente quibusdam dicta dignissimos voluptate! In, tenetur doloribus. Hic!</p>
+                    <div class="tab-titles">
+                        <p class="tab-links" onclick="opentab('skills')" id="skill1">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Frontend Web Development</span><br>Building front-end portion of websites</li>
+                            <li><span>Data Structure and Algorithms</span><br>Understanding of various data structures to solve problems 
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022-Current</span><br>B.Tech.(CSE-AIML) from Panipat Institite of Engineering and Technology 
+                            </li>
+                            <li><span>2021-2022</span><br>12th from L.C.R.T. Public School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="projects">
+        <div class="container">
+            <h1 class="title">Projects</h1>
+            <div class="project-list">
+                <div>
+                    <h2>Landing Page</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime aspernatur sit veritatis, neque, non tempore nemo unde doloribus culpa optio nihil, itaque porro.</p>
+                </div>
+                <div>
+                    <h2>Portfolio Website</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime aspernatur sit veritatis, neque, non tempore nemo unde doloribus culpa optio nihil, itaque porro.</p>
+                </div>
+                <div>
+                    <h2>Netflix Clone</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime aspernatur sit veritatis, neque, non tempore nemo unde doloribus culpa optio nihil, itaque porro.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="title">Contact Me</h1>
+                    <div class="icons">
+                        <p><a href="mailto:atrejasmi@gmail.com"><i class="fa-solid fa-envelope"></i>: atrejasmi@gmail.com</a></p>
+                        <p><a href="tel:7404123801"><i class="fa-solid fa-phone"></i>: +91 7404123801</a></p>
+                        <p><a href="https://www.linkedin.com/in/asmi-atreja-3b8aa129a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BKcNC9KvWSYqLyX%2FFVGof%2BQ%3D%3D"><i class="fa-brands fa-linkedin">: ASMI ATREJA</i></a></p>
+                    </div>
+                    <a href="" class="btn" download>Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form action="">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="text" name="Email" placeholder="Your Email" required>
+                        <textarea name="message" rows="7" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Copyright &copy; Made by Asmi
+    </footer>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");    
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        document.getElementById(tabname).classList.add("active-tab")
+    }    
+</script> 
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script> 
+</body>
+</html>
